@@ -29,6 +29,7 @@
 		}
 
 		.registerForm {
+			max-width: 250px;
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
@@ -38,6 +39,7 @@
 				padding: 10px;
 				border-bottom: #ebeff6 solid 1px;
 				transition: all 0.4s ease;
+				width: 250px;
 			}
 
 			input:focus {
@@ -49,11 +51,26 @@
 				color: #a2abc1;
 			}
 
+
+			label {
+				span {
+					margin-left: 5px;
+				}
+			}
+
 			button {
 				padding: 15px;
 				border-radius: 10px;
 				background-color: #664de5;
 				color: white;
+			}
+
+			button:disabled {
+				background-color: #927ff1;
+			}
+
+			button:disabled:hover {
+				background-color: #927ff1;
 			}
 
 			button:hover {
