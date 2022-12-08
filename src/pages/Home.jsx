@@ -1,10 +1,14 @@
-import {Link} from 'react-router-dom'
+import './style.scss'
+import Chat from '../components/Chat'
+import Sidebar from '../components/Sidebar'
 const Home = () => {
 	return (
-		<>
-		<Link to='/register'> register</Link>
-		<Link to='/login'> login</Link>
-		</>
+		<div className="home">
+			<div className="container">
+				<Sidebar/>
+				<Chat/>
+			</div>
+		</div>
 	)
 }
 

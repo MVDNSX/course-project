@@ -86,8 +86,167 @@
 	}
 }
 
-
-
 .avatar {
 	display: none;
+}
+
+
+.home {
+	height: 100vh;
+	background-color: #927ff1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 65%;
+	height: 80%;
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.sidebar {
+	flex: 0.9;
+	background-color: #001837;
+
+	.navbar {
+		height: 60px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+
+		.logo {
+			font-weight: bold;
+			cursor: default;
+		}
+
+		.user {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			img {
+				height: 37px;
+				width: 37px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			button {
+				border-radius: 5px;
+				height: 24px;
+				padding: 0 5px;
+				background-color: #927ff1;
+				color: #fff
+			}
+		}
+	}
+
+	.search {
+		border-bottom: solid 1px #927ff1;
+		;
+
+		.searchForm {
+			padding: 10px;
+
+			input {
+				color: #fff;
+				width: 100%;
+				background-color: transparent;
+
+				&::placeholder {
+					color: lightgray;
+				}
+
+				&:focus::placeholder {
+					color: transparent;
+				}
+			}
+		}
+	}
+
+	.userChat {
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: #fff;
+
+		&:hover {
+			background-color: #002049;
+			cursor: pointer;
+		}
+
+		img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			object-fit: cover;
+		}
+
+		.chatInfo {
+			span {
+				font-size: 18px;
+				font-weight: 500;
+			}
+
+			p {
+				font-size: 14px;
+				color: #c9c9c9;
+			}
+		}
+	}
+}
+
+.chat {
+	flex: 2;
+	background-color: #002049;
+
+	.chatInfo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+		height: 70px;
+		background-color: #001837;
+		color: #fff;
+
+		.chatUser {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			.chatUserInfo {
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+				cursor: default;
+
+				.lastTime {
+					color: #535e72
+				}
+			}
+		}
+
+		.chatIcons {
+			display: flex;
+			gap: 15px;
+
+			svg:hover {
+				color: #927ff1;
+				cursor: pointer;
+			}
+		}
+	}
 }
