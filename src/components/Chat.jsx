@@ -1,6 +1,7 @@
 import avatar from '../assets/avatar.png'
 import {BiVideoPlus, BiPhone, BiDotsVerticalRounded} from 'react-icons/bi'
-
+import Messages from './Messages'
+import Input from './Input'
 const Chat = () => {
 	return (
 		<div className="chat">
@@ -20,6 +21,8 @@ const Chat = () => {
 					<BiDotsVerticalRounded size='24px' />
 				</div>
 			</div>
+			<Messages/>
+			<Input/>
 		</div>
 	)
 }

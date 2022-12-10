@@ -1,4 +1,4 @@
-import avatar from '../assets/avatar.png'
+import FindUser from "./FindUser"
 
 const Search = () => {
 	return (
@@ -6,12 +6,7 @@ const Search = () => {
 			<div className="searchForm">
 				<input type="text" placeholder="Find a username"/>
 			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-				</div>
-			</div>
+			<FindUser/>
 		</div>
 	)
 }

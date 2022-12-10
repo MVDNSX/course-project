@@ -1,70 +1,17 @@
-import avatar from '../assets/avatar.png'
+import ChatUser from './ChatUser'
+
 const Chats = () => {
 	return (
 		<div className="chats">
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
-			<div className="userChat">
-				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>Last message</p>
-				</div>
-			</div>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
+			<ChatUser/>
 		</div>
 	)
 }

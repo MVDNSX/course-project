@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:13.5.0"],\
             ["axios", "npm:1.2.0"],\
+            ["emoji-picker-react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7"],\
             ["eslint-config-react-app", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:7.0.1"],\
             ["formik", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:2.2.9"],\
             ["react", "npm:18.2.0"],\
@@ -6640,6 +6641,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["clsx", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-1.2.1-77792dc182-30befca801.zip/node_modules/clsx/",\
+          "packageDependencies": [\
+            ["clsx", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["co", [\
         ["npm:4.6.0", {\
           "packageLocation": "./.yarn/cache/co-npm-4.6.0-03f2d1feb6-5210d92230.zip/node_modules/co/",\
@@ -6972,6 +6982,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:13.5.0"],\
             ["axios", "npm:1.2.0"],\
+            ["emoji-picker-react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7"],\
             ["eslint-config-react-app", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:7.0.1"],\
             ["formik", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:2.2.9"],\
             ["react", "npm:18.2.0"],\
@@ -7943,6 +7954,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/emittery-npm-0.8.1-9771f0f260-2457e8c7b0.zip/node_modules/emittery/",\
           "packageDependencies": [\
             ["emittery", "npm:0.8.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["emoji-picker-react", [\
+        ["npm:4.4.7", {\
+          "packageLocation": "./.yarn/cache/emoji-picker-react-npm-4.4.7-65ab80dfb3-76d3c56a1d.zip/node_modules/emoji-picker-react/",\
+          "packageDependencies": [\
+            ["emoji-picker-react", "npm:4.4.7"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7", {\
+          "packageLocation": "./.yarn/__virtual__/emoji-picker-react-virtual-254d01cfb9/0/cache/emoji-picker-react-npm-4.4.7-65ab80dfb3-76d3c56a1d.zip/node_modules/emoji-picker-react/",\
+          "packageDependencies": [\
+            ["emoji-picker-react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7"],\
+            ["@types/react", null],\
+            ["clsx", "npm:1.2.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

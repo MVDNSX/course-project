@@ -167,9 +167,46 @@
 				}
 			}
 		}
-	}
 
-	.userChat {
+		.findUser {
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: #fff;
+
+			&:hover {
+				background-color: #002049;
+				cursor: pointer;
+			}
+
+			img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			.userInfo {
+				span {
+					font-size: 18px;
+					font-weight: 500;
+				}
+
+				p {
+					font-size: 14px;
+					color: #c9c9c9;
+				}
+			}
+		}
+	}
+}
+
+.chats {
+	height: calc(100% - 100px);
+	overflow: scroll;
+
+	.chatUser {
 		padding: 10px;
 		display: flex;
 		align-items: center;
@@ -202,6 +239,8 @@
 	}
 }
 
+
+
 .chat {
 	flex: 2;
 	background-color: #002049;
@@ -219,6 +258,7 @@
 			display: flex;
 			align-items: center;
 			gap: 10px;
+			flex-shrink: 0;
 
 			img {
 				width: 50px;
@@ -246,6 +286,108 @@
 			svg:hover {
 				color: #927ff1;
 				cursor: pointer;
+			}
+		}
+	}
+
+	.messages {
+		height: calc(100% - 130px);
+		overflow: scroll;
+		padding: 10px 20px 10px 10px;
+
+		.message {
+			display: flex;
+			gap: 20px;
+			margin-bottom: 20px;
+
+			.messageInfo {
+				display: flex;
+				flex-direction: column;
+				flex-shrink: 0;
+				color: gray;
+				font-weight: 300;
+				font-size: 14px;
+				align-items: center;
+				gap: 3px;
+
+				img {
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+			}
+
+			.messageContent {
+				max-width: 80%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+
+
+				p {
+					color: white;
+					background: #0F82FF;
+					border-radius: 0 10px 10px 10px;
+					padding: 10px 20px;
+					max-width: max-content;
+				}
+
+				img {
+					width: 50%;
+				}
+			}
+
+			&.owner {
+				flex-direction: row-reverse;
+
+				.messageContent {
+					align-items: flex-end;
+
+					p {
+						color: white;
+						background: #927ff1;
+						border-radius: 10px 0 10px 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.input {
+		background-color: #001835;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+
+		input {
+			flex-grow: 1;
+			font-style: 24px;
+			height: 40px;
+			color: white;
+			background-color: transparent;
+
+			&:focus::placeholder {
+				color: transparent
+			}
+		}
+
+		.inputControls {
+			display: flex;
+			gap: 15px;
+
+			input {
+				display: none;
+			}
+
+			svg {
+				color: white;
+
+				&:hover {
+					color: #927ff1;
+				}
 			}
 		}
 	}
