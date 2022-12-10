@@ -5,10 +5,6 @@ import Register from './pages/Register'
 import Home from './pages/Home'
 import { Notfound } from './pages/Notfound';
 function App() {
-
-
-
-
 	return (
 		<div className="App">
 			<Routes>

@@ -43,6 +43,7 @@ const Login = () => {
 										<input name='email' type="email" placeholder='Email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
 										{errors.email && touched.email && errors.email}
 										<input name='password' type="password" placeholder='Password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+										{errors.password && touched.password && errors.password}
 										<button type="submit" disabled={isSubmitting}>Sign in</button>
 									</form>)
 							}
