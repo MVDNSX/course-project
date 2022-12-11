@@ -1,8 +1,11 @@
 import avatar from '../assets/avatar.png'
 
-const FindUser = ({username}) => {
+const FindUser = ({userId, username}) => {
+	const handleClick = (e) => {
+		console.log(userId, username)
+	}
 	return (
-		<div className="findUser">
+		<div className="findUser" onClick={handleClick}>
 				<img src={avatar} alt="avatar" />
 				<div className="userInfo">
 					<span>{username}</span>

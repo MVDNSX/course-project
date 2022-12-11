@@ -1,13 +1,16 @@
 import './style.scss'
 import {Formik} from 'formik'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { getAuth } from '../redux/reduxSlices/authSlice'
 
 const Login = () => {
+	const dispatch = useDispatch()
 	return (
 		<div className="registerContainer">
 			<div className="registerWallpapper">
 				<span className='registerChatName'>MVDNXS Chat</span>
-				<span>Register</span>
+				<span>Login</span>
 				<Formik
 					initialValues={{
 						email: '',
@@ -28,6 +31,7 @@ const Login = () => {
 						onSubmit={(values, {setSubmitting}) => {
 							setTimeout(() => {
 								alert(JSON.stringify(values, null, 2));
+								dispatch(getAuth(JSON.stringify(values)))
 								setSubmitting(false);
 							}, 400);
 						}}>

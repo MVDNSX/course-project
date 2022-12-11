@@ -1,9 +1,18 @@
 import './style.scss'
 import {AiFillFileImage} from 'react-icons/ai'
 import {Formik} from 'formik'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { registerUser } from '../redux/reduxSlices/registerSlice'
 
 const Register = () => {
+	const dispatch = useDispatch()
+	const status = useSelector((state) => state.reg.status)
+	if(status === 'ok'){
+		return <Navigate to='/'/>
+	}
+	
 	return (
 		<div className="registerContainer">
 			<div className="registerWallpapper">
@@ -33,7 +42,8 @@ const Register = () => {
 						}}
 						onSubmit={(values, {setSubmitting}) => {
 							setTimeout(() => {
-								alert(JSON.stringify(values, null, 2));
+								// alert(JSON.stringify(values, null, 2));
+								dispatch(registerUser(values))
 								setSubmitting(false);
 							}, 400);
 						}}>
