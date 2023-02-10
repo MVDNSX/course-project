@@ -3,15 +3,15 @@ import {AiFillFileImage} from 'react-icons/ai'
 import {Formik} from 'formik'
 import { Link, Navigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
 import { registerUser } from '../redux/reduxSlices/registerSlice'
 
 const Register = () => {
 	const dispatch = useDispatch()
 	const status = useSelector((state) => state.reg.status)
-	if(status === 'ok'){
-		return <Navigate to='/'/>
+	if(status === 'registred'){
+		return <Navigate to='/login'/>
 	}
+	
 	
 	return (
 		<div className="registerContainer">
@@ -20,15 +20,15 @@ const Register = () => {
 				<span>Register</span>
 				<Formik
 					initialValues={{
-						name: '',
+						username: '',
 						email: '',
 						password: '',
-						avatar: '',
+						//avatar: '',
 					}}
 						validate={values => {
 							const errors = {};
-							if(!values.name){
-								errors.name = 'Required';
+							if(!values.username){
+								errors.username = 'Required';
 							};
 							if(!values.email){
 								errors.email = 'Required';
@@ -43,6 +43,7 @@ const Register = () => {
 						onSubmit={(values, {setSubmitting}) => {
 							setTimeout(() => {
 								// alert(JSON.stringify(values, null, 2));
+								console.log(values)
 								dispatch(registerUser(values))
 								setSubmitting(false);
 							}, 400);
@@ -56,15 +57,15 @@ const Register = () => {
 								handleSubmit,
 								isSubmitting}) => (
 									<form onSubmit={handleSubmit} className='registerForm'>
-										<input name='name' type="text" placeholder='Name' value={values.name} onChange={handleChange} onBlur={handleBlur}/>
+										<input name='username' type="text" placeholder='user name' value={values.user_name} onChange={handleChange} onBlur={handleBlur}/>
 										<input name='email' type="email" placeholder='Email' value={values.email} onChange={handleChange} onBlur={handleBlur}/>
 										{errors.email && touched.email && errors.email}
 										<input name='password' type="password" placeholder='Password' value={values.password} onChange={handleChange} onBlur={handleBlur}/>
-										<label className='avatarLabel' htmlFor="avatar" onChange={handleChange} onBlur={handleBlur}>
+										{/* <label className='avatarLabel' htmlFor="avatar" onChange={handleChange} onBlur={handleBlur}>
 											<AiFillFileImage size='20px' color='#664de5'/>
 											<span>{values.avatar ? values.avatar: 'Load file'}</span>
 											<input name='avatar' value={values.avatar} onChange={handleChange} onBlur={handleBlur} className='avatar' type="file" id="avatar"/>
-										</label>
+										</label> */}
 										<button type="submit" disabled={isSubmitting}>Sign up</button>
 									</form>)
 							}

@@ -1,25 +1,45 @@
 import axios from "axios";
 
-const instanse = axios.create({
-	baseURL: 'http://localhost:5000',
+const host = axios.create({
+	baseURL: 'http://localhost:5000/',
 	//withCredentials: true,
 	headers: {
-		//	'API-KEY': '602bacaa-bd3d-4012-b37f-c0fc1050fdda'
-		'content-type': 'application/json'
+		'content-type': 'application/json',
+	}
+})
+
+const instanseAuth = axios.create({
+	baseURL: 'http://localhost:5000/',
+	//withCredentials: true,
+	headers: {
+		'content-type': 'application/json',
+		'Authorization': `Bearer ${localStorage.getItem('token')}`
 	}
 })
 
 export const authAPI = {
 	getAuth(authUserData) {
-		return instanse.post('/auth', authUserData)
+		return host.post('api/user/login', authUserData)
 	},
 	regNewUser(regUserData) {
-		return instanse.post('/register', regUserData)
+		return host.post('api/user/register', regUserData)
+	},
+	getCheck() {
+		return instanseAuth.get('api/user/check')
 	}
 }
 
-export const usersAPI = {
-	getUsers() {
-		return instanse.get('/users')
+export const dialogAPI = {
+	createDialog(withUserData) {
+		return instanseAuth.post('api/dialog/create', withUserData)
+	},
+	getDialogs() {
+		return instanseAuth.get('api/dialog/load')
+	}
+}
+
+export const userAPI = {
+	searchUser(username) {
+		return host.get(`api/user/load?username=${username}`)
 	}
 }

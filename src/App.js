@@ -4,7 +4,16 @@ import Login from './pages/Login';
 import Register from './pages/Register'
 import Home from './pages/Home'
 import { Notfound } from './pages/Notfound';
+import { useDispatch } from 'react-redux';
+import { getCheck } from './redux/reduxSlices/authSlice';
+import { useEffect } from 'react';
 function App() {
+
+	const dispatch = useDispatch()
+	useEffect(() => {
+		dispatch(getCheck())
+	}, [])
+
 	return (
 		<div className="App">
 			<Routes>

@@ -2,16 +2,18 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { authAPI } from '../../api/API';
 
 
+
 export const registerUser = createAsyncThunk(
 	'register/registerUser',
-	async (authUserData) => {
-		const response = await authAPI.regNewUser(authUserData)
+	async (regUserData) => {
+		const response = await authAPI.regNewUser(regUserData)
+		localStorage.setItem('token', response.data.token)
 		return response.data
 	}
 )
 
 const initialState = {
-	status: []
+	status: 0
 }
 
 // Then, handle actions in your reducers:
@@ -23,6 +25,7 @@ const registerSlice = createSlice({
 	},
 	extraReducers: {
 		[registerUser.pending]: (state, action) => {
+			state.status = 0
 			console.log('loading')
 		},
 		[registerUser.fulfilled]: (state, action) => {

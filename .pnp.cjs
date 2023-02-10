@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["emoji-picker-react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7"],\
             ["eslint-config-react-app", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:7.0.1"],\
             ["formik", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:2.2.9"],\
+            ["jwt-decode", "npm:3.1.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:18.2.0"],\
             ["react-icons", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.7.1"],\
@@ -6985,6 +6986,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["emoji-picker-react", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.4.7"],\
             ["eslint-config-react-app", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:7.0.1"],\
             ["formik", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:2.2.9"],\
+            ["jwt-decode", "npm:3.1.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:18.2.0"],\
             ["react-icons", "virtual:4817491ff1d86f93b93d0aac914f2b262dc28f2004c7bd5aa1d41962cfd871e5ff0380c3e94c1115bfd65d0887fe600f10609c1bce1dd2a3335c0c65ff883ba6#npm:4.7.1"],\
@@ -11699,6 +11701,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jsx-ast-utils", "npm:3.3.3"],\
             ["array-includes", "npm:3.1.6"],\
             ["object.assign", "npm:4.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jwt-decode", [\
+        ["npm:3.1.2", {\
+          "packageLocation": "./.yarn/cache/jwt-decode-npm-3.1.2-bf3ab26591-20a4b072d4.zip/node_modules/jwt-decode/",\
+          "packageDependencies": [\
+            ["jwt-decode", "npm:3.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\

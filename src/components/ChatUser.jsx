@@ -1,12 +1,13 @@
 import avatar from '../assets/avatar.png'
 
-const ChatUser = () => {
+const ChatUser = ({dialogId, withUserId, withUserName}) => {
+	console.log(withUserId)
 	return (
-		<div className="chatUser">
+		<div className="chatUser" dialog_id={dialogId}>
 				<img src={avatar} alt="avatar" />
-				<div className="chatInfo">
-					<span>Mvdnxs</span>
-					<p>last message</p>
+				<div className="chatInfo" >
+					<span user_id={withUserId} >{withUserName}</span>
+					<p>--------</p>
 				</div>
 			</div>
 	)

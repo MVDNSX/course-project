@@ -1,11 +1,17 @@
 import './style.scss'
 import {Formik} from 'formik'
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { Link, Navigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { getAuth } from '../redux/reduxSlices/authSlice'
 
 const Login = () => {
+
 	const dispatch = useDispatch()
+	const status = useSelector((state) => state.auth.status)
+	if(status === 10){
+		return <Navigate to='/'/>
+	}
+
 	return (
 		<div className="registerContainer">
 			<div className="registerWallpapper">
@@ -30,9 +36,9 @@ const Login = () => {
 						}}
 						onSubmit={(values, {setSubmitting}) => {
 							setTimeout(() => {
-								alert(JSON.stringify(values, null, 2));
 								dispatch(getAuth(JSON.stringify(values)))
 								setSubmitting(false);
+								console.log(values)
 							}, 400);
 						}}>
 							{({

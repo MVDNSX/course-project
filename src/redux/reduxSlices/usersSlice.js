@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { usersAPI } from '../../api/API'
+import { authAPI } from '../../api/API'
 
 
 export const getUsers = createAsyncThunk(
 	'users/getUsers',
 	async () => {
-		const response = await usersAPI.getUsers();
+		const response = await authAPI.getCheck();
+		localStorage.setItem('token', response.data.token)
 		return response.data;
 	}
 )
@@ -20,15 +21,14 @@ const usersSlice = createSlice({
 	name: 'users',
 	initialState,
 	reducers: {
-
 	},
 	extraReducers: {
 		[getUsers.pending]: (state) => {
 			state.users = []
 		},
 		[getUsers.fulfilled]: (state, action) => {
-			state.users = []
-			state.users.push(...action.payload.map(({ id, username, email }) => ({ id, username, email })))
+			//state.users = []
+			//state.users.push(...action.payload.map(({ id, username, email }) => ({ id, username, email })))
 		},
 		[getUsers.rejected]: () => {
 			console.log('error')

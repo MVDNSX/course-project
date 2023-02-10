@@ -1,15 +1,14 @@
 import './style.scss'
 import Chat from '../components/Chat'
 import Sidebar from '../components/Sidebar'
-import { getUsers } from '../redux/reduxSlices/usersSlice'
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch} from 'react-redux';
+import { useEffect} from 'react';
+import { getDialogs } from '../redux/reduxSlices/dialogSlice';
 const Home = () => {
 
-	const dispatch = useDispatch();
-
+	const dispatch = useDispatch()
 	useEffect(()=>{
-		dispatch(getUsers())
+		dispatch(getDialogs())
 	},[])
 
 

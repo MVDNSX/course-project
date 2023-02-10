@@ -1,21 +1,35 @@
 import FindUser from "./FindUser"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import {useDispatch, useSelector} from 'react-redux'
+import { clearSearch, getSearchUser } from "../redux/reduxSlices/searchSlice";
 
 const Search = () => {
-
-	const users = useSelector(state => state.users.users)
+	
+	const dispatch = useDispatch();
+	const user = useSelector(state => state.search.resultSearch)
 	const [findUsername, setFindUsername] = useState('')
 
-	
+	const handleSearch = (e) => {
+		setFindUsername(e.target.value)
+		if(findUsername.length > 3){
+			setTimeout(() => {
+				dispatch(getSearchUser(findUsername))
+			}, 1000);
+		}
+	}
 
+	const handleClickSearch = () => {
+		setFindUsername([]);
+		dispatch(clearSearch())
+	}
 
 	return (
 		<div className="search">
 			<div className="searchForm">
-				<input type="text" placeholder="Find a username" value={findUsername} onChange={(e)=> {setFindUsername(e.currentTarget.value)}}/>
+				<input type="text" placeholder="Find a username" value={findUsername} onChange={(e)=> {handleSearch(e)}}/>
+
 			</div>
-			{findUsername === '' ? '' : users.filter(u => u.username.toLowerCase().includes(findUsername.toLowerCase())).map(u => <FindUser key={u.id} userId={u.id} username={u.username}/>)}
+			{user === null ? '' : user.map(u => <FindUser key={u.id} withUserId={u.id} withUserName={u.username} handleClickSearch={handleClickSearch}/>)}
 		</div>
 	)
 }
